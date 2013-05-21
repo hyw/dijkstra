@@ -2,24 +2,11 @@
 // SHORTESTPATHS.JAVA
 // Compute shortest paths in a graph.
 //
-// Your constructor should compute the actual shortest paths and
-// maintain all the information needed to reconstruct them.  The
-// returnPath() function should use this information to return the
-// appropriate path of edge ID's from the start to the given end.
-//
-// Note that the start and end ID's should be mapped to vertices using
-// the graph's get() function.
-//
-// You can ignore the input and startTime arguments to the constructor
-// unless you are doing the extra credit.
-//
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-
-//import Vertex.EdgeIterator;
 
 @SuppressWarnings("unchecked")
 
@@ -35,8 +22,7 @@ class ShortestPaths {
     //
     // constructor
     //
-    public ShortestPaths(Multigraph G, int startId, 
-			 Input input, int startTime) {
+    public ShortestPaths(Multigraph G, int startId) {
     	PriorityQueue<Vertex> q = new PriorityQueue<Vertex>();
     	handles = new Handle[G.nVertices()]; //necessary because not able to index into q
     	parents = new HashMap<Vertex, Edge>();
