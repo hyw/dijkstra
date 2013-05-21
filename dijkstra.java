@@ -12,12 +12,12 @@ import java.util.Map;
 
 class ShortestPaths {
     
-	public final static double INF = java.lang.Double.POSITIVE_INFINITY;
+    public final static double INF = java.lang.Double.POSITIVE_INFINITY;
 	
-	public Handle handles[];
-	public Map<Vertex, Edge> parents;
-	public Multigraph g;
-	public int i;
+    public Handle handles[];
+    public Map<Vertex, Edge> parents;
+    public Multigraph g;
+    public int i;
 
     //
     // constructor
